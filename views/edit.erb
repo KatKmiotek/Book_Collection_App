@@ -1,0 +1,34 @@
+<fieldset>
+  <legend>Add New Book</legend>
+  <form class="" action="/collection/<%= @book.id %>" method="post">
+  <!-- <label for="user_id"></label>
+  <input type="text" name="user_id" value=""> -->
+  <label for="author">Author</label>
+  <input type="text" name="author" value="<%= @book.author %>">
+  <label for="title">Title</label>
+  <input type="text" name="title" value="<%= @book.title %>">
+  <label for="language">Language: </label>
+  <select class="" name="language">
+    <option value="">select</option>
+    <option value="Polish" <%="selected" if @book.language == "Polish"%>>Polish</option>
+    <option value="English"<%="selected" if @book.language == "English"%>>English</option>
+    <option value="Other"<%="selected" if @book.language == "Other"%>>Other</option>
+  </select>
+  <label for="location">Location</label>
+  <select class="" name="location">
+    <option value="">select</option>
+    <option value="at home"<%="selected" if @book.location == "at home"%>>at home</option>
+    <option value="away"<%="selected" if @book.location == "away"%>>away</option>
+  </select>
+  <label for="status">Status</label>
+  <select class="" name="status">
+  <option value="">select</option>
+  <option value="to read"<%="selected" if @book.status == "to read"%>>to read</option>
+  <option value="have read"<%="selected" if @book.status == "have read"%>>have read</option>
+  <option value="reading"<%="selected" if @book.status == "reading"%>>reading</option>
+  </select>
+  <label for="comment">comment</label>
+  <input type="text" name="comment" value="<%= @book.comment %>">
+  <input class ="button" type="submit" name="" value="Update details">
+</form>
+</fieldset>

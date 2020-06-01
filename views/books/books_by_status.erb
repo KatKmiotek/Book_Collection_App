@@ -1,0 +1,20 @@
+<a href="/new" method = "post" class = "button">Add a new book</a>
+
+<table style = "width:100%">
+  <tr>
+    <th><a href="/collection/byauthor/" method = "get">Author</a></th>
+    <th><a href="/collection/bytitle/" method = "get">Title</a></th>
+    <th><a href="/collection/bylocation/" method = "get">Location</a></th>
+    <th><a href="/collection/bystatus/" method = "get">Status</a></th>
+    <th>Details</th>
+  </tr>
+  <% @books.each do |book| %>
+  <tr>
+  <td><%= book.author %></td>
+  <td><%= book.title %></td>
+  <td><%= book.location %></td>
+  <td><%= book.status %></td>
+  <td><a href="/collection/<%= book.id %>" class = "button">See deatils</a></td>
+  <% end %>
+  </tr>
+</table>

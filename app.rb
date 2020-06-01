@@ -6,21 +6,14 @@ require_relative('./models/book')
 also_reload('./models')
 
 
+
+
 get '/' do
-  erb( :user )
-end
-
-post '/home' do
   @books = Book.find_all()
-  @user = User.new(params)
   erb(:index)
 end
 
-get '/home' do
-  @books = Book.find_all()
-  @user = User.new(params)
-  erb(:index)
-end
+
 
 post '/collection' do
   @books = Book.find_all()
@@ -50,9 +43,6 @@ post '/create' do
    erb(:create)
 end
 
-get '/create' do
-  redirect to (:index)
-end
 post '/collection/:id/delete' do
   @book = Book.find_by_id(params[:id])
   @book.delete_by_id
@@ -90,7 +80,10 @@ end
 get '/about' do
   erb(:about)
 end
-
+post '/collection/search/' do
+  @books = Book.search(params[:search])
+  erb(:"books/tests")
+end
 
 #error handling TODO
 error '/collection/:id/delete' do

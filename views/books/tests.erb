@@ -1,1 +1,19 @@
-<p>test</p>
+<p>Search results</p>
+<table style = "width:100%">
+  <tr>
+    <th>Author</th>
+    <th>Title</th>
+    <th>Location</th>
+    <th>Comment</th>
+    <th>Details</th>
+  </tr>
+  <% @books.each do |book| %>
+  <tr>
+  <td><%= book.author %></td>
+  <td><%= book.title %></td>
+  <td><%= book.location %></td>
+  <td><%= book.comment %></td>
+  <td><a href="/collection/<%= book.id %>" class = "button">See deatils</a></td>
+  <% end %>
+  </tr>
+</table>

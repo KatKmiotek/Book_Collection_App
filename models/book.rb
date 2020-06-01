@@ -84,5 +84,12 @@ def self.find_all_by_title()
   return books
 end
 
+def self.search(input)
+  sql = "SELECT * FROM books WHERE (lower(author) LIKE $1) OR (lower(title) LIKE $1) OR (lower(comment) LIKE $1)"
+  values = ["%#{input}%"]
+  result = SqlRunner.run(sql, values)
+  books = result.map { |book| Book.new(book) }
+  return books
+end
 
 end

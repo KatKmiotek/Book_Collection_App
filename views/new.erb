@@ -1,8 +1,12 @@
 <fieldset>
   <legend>Add New Book</legend>
 <form class="" action="/create" method="post">
-  <!-- <label for="user_id"></label>
-  <input type="text" name="user_id" value=""> -->
+  <label for="user">User</label>
+  <select class="" name="user_id">
+    <% for user in @users %>
+    <option value="<%= user.id %>"><%= user.name %></option>
+    <% end %>
+    </select>
   <label for="author">Author</label>
   <input type="text" name="author" value="">
   <label for="title">Title</label>

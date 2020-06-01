@@ -14,7 +14,6 @@ get '/' do
 end
 
 
-
 post '/collection' do
   @books = Book.find_all()
   erb(:"books/index")
@@ -31,9 +30,11 @@ get '/collection/:id' do
 end
 
 post '/new' do
+  @users = User.find_all() #this line has been added
   erb(:new)
 end
 get '/new' do
+  @users = User.find_all() #this line has been added
   erb(:new)
 end
 
@@ -50,11 +51,15 @@ post '/collection/:id/delete' do
 end
 
 get '/collection/:id/edit' do
+  @users = User.find_all() #this line has been added
+
   @book = Book.find_by_id(params[:id])
   erb(:edit)
 end
 
 post '/collection/:id' do
+  @users = User.find_all() #this line has been added
+
   @book = Book.new(params)
   @book.update()
   erb(:update)

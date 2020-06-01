@@ -3,8 +3,8 @@ require_relative('./user')
 
 class Book
 
-attr_reader :id, :author_id, :language
-attr_accessor :title, :status, :location, :comment, :author
+attr_reader :id
+attr_accessor :title, :status, :location, :comment, :author, :language, :user_id
 
 def initialize(options)
   @id = options['id'].to_i if options['id']
@@ -14,20 +14,20 @@ def initialize(options)
   @location = options['location']
   @language = options['language']
   @comment = options['comment']
-  #@user_id = options['user_id'].to_i
+  @user_id = options['user_id'].to_i
 end
 
 def save()
-  sql = "INSERT INTO books(title, author, status, location, language, comment) VALUES ($1, $2, $3, $4, $5, $6) RETURNING id"
-  values = [@title, @author, @status, @location, @language, @comment]
+  sql = "INSERT INTO books(title, author, status, location, language, comment, user_id) VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING id"
+  values = [@title, @author, @status, @location, @language, @comment, @user_id]
   result = SqlRunner.run(sql, values)
   @id = result[0]['id'].to_i
 end
 
 def update()
-  sql = "UPDATE books SET(title, author, status, location, language, comment) = ($1, $2, $3, $4, $5, $6)
-  WHERE id = $7"
-  values =[@title, @author, @status, @location, @language, @comment, @id]
+  sql = "UPDATE books SET(title, author, status, location, language, comment, user_id) = ($1, $2, $3, $4, $5, $6, $7)
+  WHERE id = $8"
+  values =[@title, @author, @status, @location, @language, @comment, @user_id, @id]
   SqlRunner.run(sql, values)
 end
 

@@ -15,6 +15,6 @@ CREATE TABLE books (
   status VARCHAR(255),
   location VARCHAR(255),
   language VARCHAR(255),
-  comment TEXT
-  -- user_id INT REFERENCES users(id) ON DELETE CASCADE
+  comment TEXT,
+  user_id INT REFERENCES users(id) ON DELETE CASCADE
 );

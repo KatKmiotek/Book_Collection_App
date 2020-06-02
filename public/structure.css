@@ -4,11 +4,12 @@
   margin: 0;
   font-style: normal;
   font-family: inherit;
-  color: grey;
+  color: black;
 }
 body {
   background-image: url("/books.jpg");
   background-repeat: no-repeat;
+  font-family:
 }
 
 .menu {
@@ -23,16 +24,23 @@ body {
 .menu.item {
   color: white;
 }
+.menu a {
+  color: white;
+}
 
 ul {
   list-style-type: none;
-
+}
+.about {
+  width: 80vw;
 }
 .flex-container2 {
 display: flex;
 flex-direction: column;
 align-items: center;
 justify-content: center;
+margin-top: 10px;
+padding-top: 5px;
 }
 
 
@@ -41,7 +49,7 @@ a {
   text-decoration: none;
 }
 h1, h2 {
-  color: grey;
+  color: black;
   font-family: inherit;
   font-size: 20px;
 }

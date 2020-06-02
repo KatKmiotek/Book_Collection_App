@@ -1,12 +1,12 @@
 input[type=text] {
-  padding:10px 10px;
+  padding: 0 10px;
   margin: 0;
   border: 1;
   border-radius:5px;
   font-size: 16px;
 }
 input[type=submit] {
-  padding:10px 10px;
+  padding: 5px 10px;
   margin: 10px;
   border: 1;
   border-radius:5px;
@@ -19,7 +19,16 @@ select {
   border-radius:10px;
 }
 fieldset {
-  
+
   background-color: inherit;
   padding-bottom: 10px;
+}
+.add-book {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.add-book label {
+  margin: 0 5px 0 5px;
 }

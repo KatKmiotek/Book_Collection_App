@@ -26,8 +26,8 @@ ul {
   padding: 15px 5px;
   white-space: nowrap;
 }
-.button {
-  color: black;
+.item {
+  color: white;
 }
 a {
   text-decoration: none;

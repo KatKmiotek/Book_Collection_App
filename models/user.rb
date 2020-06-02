@@ -32,7 +32,7 @@ def delete_by_id()
 end
 
 def books()
-    sql = "SELECT books FROM books INNER JOIN users ON user.id = books.user_id WHERE user.id = $1"
+    sql = "SELECT books.* FROM books INNER JOIN users ON users.id = books.user_id WHERE users.id = $1"
     values = [@id]
     result = SqlRunner.run(sql, values)
     return result.map { |book| Book.new(book) }

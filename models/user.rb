@@ -18,9 +18,23 @@ def save()
   @id = result[0]['id'].to_i
 end
 
+def update()
+  sql = "UPDATE users SET(name) = ($1)
+  WHERE id = $2"
+  values =[@name, @id]
+  SqlRunner.run(sql, values)
+end
+
+def delete_by_id()
+  sql = "DELETE FROM users WHERE id = $1"
+  values= [@id]
+  SqlRunner.run(sql, values)
+end
+
 def books()
-    sql = "SELECT * FROM users JOIN books ON user.id = books.user_id"
-    result = SqlRunner.run(sql)
+    sql = "SELECT books FROM books INNER JOIN users ON user.id = books.user_id WHERE user.id = $1"
+    values = [@id]
+    result = SqlRunner.run(sql, values)
     return result.map { |book| Book.new(book) }
 end
 #below to edit

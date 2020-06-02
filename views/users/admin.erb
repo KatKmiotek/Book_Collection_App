@@ -1,0 +1,21 @@
+<p>You are now the admin. You can view, add and edit all Book Collection users</p>
+</form>
+  <form action="/admin/new" method="get">
+  <input type="submit" value="Add New User">
+</form></td>
+<table>
+  <tr>
+    <th>User Name</th>
+    <th>Number of Books</th>
+    <th>Details</th>
+  </tr>
+  <% for user in @users %>
+  <tr>
+  <td><%= user.name %></td>
+  <td> </td>
+  <td><form action="/admin/<%= user.id %>/delete" method="post">
+    <input type="submit" value="Delete">
+  </tr>
+</table>
+
+<% end %>

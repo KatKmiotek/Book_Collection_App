@@ -3,11 +3,23 @@
   <head>
     <meta charset="utf-8">
     <title>📖Library</title>
+    <link rel="stylesheet" href="/style.css">
   </head>
   <body>
-    <a href="/" method = "get" class = "button">Home Page</a>
-
+    <nav>
+      <ul class= "menu">
+      <li class = "item"><a href="/" method = "get" class = "button">Home Page</a></li>
+      <li class = "item"><a href="/collection" method = "get" class = "button">Your Collection</a></li>
+      <li class = "item"><a href="/about" method = "get" class = "button">About</a></li>
+      <li><a href="/new" method = "post" class = "button">Add a new book</a></li>
+      <li><form class="" action="/collection/search/" method="POST">
+        <input type="text" placeholder="Search your books" name="search">
+        <input type="submit" name="" value="search">
+      </form></li>
+      <li class = "item"><a href="/admin" method = "get" class = "button">Admin</a></li>
+      </ul>
+    </nav>
     <%= yield %>
   </body>
-  <footer> <a href="/about" method = "get" class = "button">About the project</a></footer>
+  <footer></footer>
 </html>

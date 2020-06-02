@@ -1,6 +1,7 @@
 require( 'sinatra' )
 require( 'sinatra/contrib/all' )
 require( 'pry' )
+require_relative('controllers/user_controllers')
 require_relative('./models/user')
 require_relative('./models/book')
 also_reload('./models')

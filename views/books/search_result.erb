@@ -7,7 +7,7 @@
     <th>Comment</th>
     <th>Details</th>
   </tr>
-  <% @books.each do |book| %>
+  <% @user.search(params[:search]).each do |book| %>
   <tr>
   <td><%= book.author %></td>
   <td><%= book.title %></td>

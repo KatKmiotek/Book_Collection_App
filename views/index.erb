@@ -1,6 +1,6 @@
-<p>Welcome in your book collection</p>
+<p>Welcome <%= @user.name %> in your book collection</p>
 
-  <p>You have <%= @books.count %> books in your library</p>
+  <p>You have <%= @user.books.count %> books in your library</p>
   <form class="" action="/collection" method="post">
   <input type="submit" name="View them" value="View them">
 </form>

@@ -30,14 +30,55 @@ def delete_by_id()
   values= [@id]
   SqlRunner.run(sql, values)
 end
-
+#joining
 def books()
     sql = "SELECT books.* FROM books INNER JOIN users ON users.id = books.user_id WHERE users.id = $1"
     values = [@id]
     result = SqlRunner.run(sql, values)
     return result.map { |book| Book.new(book) }
 end
-#below to edit
+# uder's data sorting:
+def find_all_by_author()
+  sql = "SELECT books.* FROM books INNER JOIN users ON users.id = books.user_id WHERE users.id = $1 ORDER BY author"
+  values =[@id]
+  result = SqlRunner.run(sql, values)
+  books = result.map { |book| Book.new(book) }
+  return books
+end
+
+def find_all_by_title()
+  sql = "SELECT books.* FROM books INNER JOIN users ON users.id = books.user_id WHERE users.id = $1 ORDER BY title"
+  values =[@id]
+  result = SqlRunner.run(sql, values)
+  books = result.map { |book| Book.new(book) }
+  return books
+end
+
+def find_all_by_location()
+  sql = "SELECT books.* FROM books INNER JOIN users ON users.id = books.user_id WHERE users.id = $1 ORDER BY location DESC"
+  values =[@id]
+  result = SqlRunner.run(sql, values)
+  books = result.map { |book| Book.new(book) }
+  return books
+end
+
+def find_all_by_status()
+  sql = "SELECT books.* FROM books INNER JOIN users ON users.id = books.user_id WHERE users.id = $1 ORDER BY status DESC"
+  values =[@id]
+  result = SqlRunner.run(sql, values)
+  books = result.map { |book| Book.new(book) }
+  return books
+end
+#
+#search in user's data
+def search(input)
+  sql = "SELECT * FROM books WHERE (lower(author) LIKE $1) OR (lower(title) LIKE $1) OR (lower(comment) LIKE $1)"
+  values = ["%#{input}%"]
+  result = SqlRunner.run(sql, values)
+  books = result.map { |book| Book.new(book) }
+  return books
+end
+
 def self.find_all()
   sql = "SELECT * FROM users"
   result = SqlRunner.run(sql)

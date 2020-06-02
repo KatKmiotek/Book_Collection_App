@@ -8,7 +8,7 @@
     <th><a href="/collection/bystatus/" method = "get">Status</a></th>
     <th>Details</th>
   </tr>
-  <% @books.each do |book| %>
+  <% @user.find_all_by_author.each do |book| %>
   <tr>
   <td><%= book.author %></td>
   <td><%= book.title %></td>

@@ -55,7 +55,7 @@ def self.find_by_id(id)
   result = SqlRunner.run(sql, values)
   return Book.new(result.first)
 end
-
+# general book collection sorting - can be used in future 
 def self.find_all_by_author()
   sql = "SELECT * FROM books ORDER BY author"
   result = SqlRunner.run(sql)
@@ -83,7 +83,7 @@ def self.find_all_by_title()
   books = result.map { |book| Book.new(book) }
   return books
 end
-
+# general search function - can be used in future
 def self.search(input)
   sql = "SELECT * FROM books WHERE (lower(author) LIKE $1) OR (lower(title) LIKE $1) OR (lower(comment) LIKE $1)"
   values = ["%#{input}%"]

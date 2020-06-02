@@ -4,9 +4,9 @@
 <p>Status: <%= @book.status %> </p>
 <p>Written in <%= @book.language %></p>
 <p>Comment: <%=@book.comment %></p>
-<form action="/collection/<%= @book.id %>/delete" method="post">
-  <input class= "button" type="submit" value="Delete from library">
-</form>
-  <form action="/collection/<%= @book.id %>/edit" method="get">
+  <form class = "form-inline" action="/collection/<%= @book.id %>/edit" method="get">
   <input class = "button" type="submit" value="Update">
+</form>
+<form class = "form-inline" action="/collection/<%= @book.id %>/delete" method="post">
+  <input class= "button" type="submit" value="Delete from library">
 </form>

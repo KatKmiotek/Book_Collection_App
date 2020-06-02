@@ -2,7 +2,7 @@
 <form action="/admin/new" method="get">
   <input type="submit" value="Add New User">
 </form></td>
-<table>
+<table class = "">
   <tr>
     <th>User Name</th>
     <th>Number of Books</th>
@@ -13,10 +13,10 @@
     <td><%= user.name %></td>
     <td><%= user.books.count %></td>
     <td>
-      <form class="" action="/admin/<%= user.id %>/collection" method="get">
+      <form class="form-inline" action="/admin/<%= user.id %>/collection" method="get">
         <input type="submit" name="" value="See all books">
       </form>
-      <form action="/admin/<%= user.id %>/delete" method="post">
+      <form  class = "form-inline" action="/admin/<%= user.id %>/delete" method="post">
         <input type="submit" value="Delete">
         </form>
       </tr>

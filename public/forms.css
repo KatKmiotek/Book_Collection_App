@@ -32,3 +32,6 @@ fieldset {
 .add-book label {
   margin: 0 5px 0 5px;
 }
+.form-inline {
+  display: inline-flex;
+}

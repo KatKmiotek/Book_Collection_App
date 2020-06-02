@@ -3,23 +3,28 @@
   <head>
     <meta charset="utf-8">
     <title>📖Library</title>
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/structure.css">
+    <link rel="stylesheet" href="/buttons.css">
+    <link rel="stylesheet" href="/forms.css">
+    <link rel="stylesheet" href="/tables.css">
   </head>
   <body>
-    <nav>
+    <nav class ="flex-container">
       <ul class= "menu">
-      <li class = "item"><a href="/" method = "get" class = "">Home Page</a></li>
-      <li class = "item"><a href="/collection" method = "get" class = "">Your Collection</a></li>
-      <li class = "item"><a href="/about" method = "get" class = "">About</a></li>
-      <li><a href="/new" method = "post" class = "">Add a new book</a></li>
+      <li class = "item"><a href="/" method = "get" title = "Go back to home page" class = "">Home Page</a></li>
+      <li class = "item"><a href="/collection" method = "get" title = "Your collection" class = "">Your Collection</a></li>
+      <li class = "item"><a href="/about" method = "get" title = "details about the project"class = "">About</a></li>
+      <li><a href="/new" method = "post" title = "Add a new book"class = "">Add a new book</a></li>
       <li><form class="" action="/collection/search/" method="POST">
-        <input type="text" placeholder="Search your books" name="search">
-        <input type="submit" name="" value="search">
+        <input type="text" class = "" placeholder="Search your books" name="search">
+        <input type="submit" class="" value="Search">
       </form></li>
-      <li class = "item"><a href="/admin" method = "get" class = "button">Admin</a></li>
+      <li class = "item"><a href="/admin" method = "get" title = "admin panel" class = "button">Admin</a></li>
       </ul>
     </nav>
+    <nav class ="flex-container2">
     <%= yield %>
+    </nav>
   </body>
   <footer></footer>
 </html>

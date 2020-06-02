@@ -26,3 +26,8 @@ post '/admin/:id/delete' do
   @user.delete_by_id()
   redirect '/admin'
 end
+
+get '/admin/:id/collection' do
+  @user = User.find(params['id'].to_i)
+  erb(:"books/index")
+end

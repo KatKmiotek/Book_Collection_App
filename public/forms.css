@@ -14,7 +14,7 @@ input[type=submit] {
   font-size: 16px;
 }
 input[type=submit]:hover {
-  box-shadow: 2px 2px 5px #9fc69f;
+  box-shadow: 2px 2px 5px var(--my-green-dark);
 }
 
 select {
@@ -23,7 +23,7 @@ select {
   padding:10px;
   border-radius:10px;
   font-size: 16px;
-  background-color: #dfecdf;
+  background-color: var(--my-green-light);
 }
 fieldset {
   font-size: 18px;

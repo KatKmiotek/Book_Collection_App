@@ -1,8 +1,21 @@
 <article class="about">
 <h3>Book Collection app was created as First Project during my CodeClan adventure.</h3>
-<h3>Four weeks ago wouldnt even know where to start. And look!
-  I managed somehow to put tohether OOP in Ruby, TDD, PSQL, HTML/CSS with Sinatra tunes.
-  The RESTful app you are just browsing through is based on MVC architecture.
-  Did I mention instructors? Thanks to them for teaching me what those fancy words mean.
-  It is pretty exciting that very soon I will be able to add many updates to this app.</h3>
+<h3>About the project:<br>
+  The app is a user friendly interface allowing to keep a track of books in collection.
+Database includes two tables- users and books.<br>
+User is able to add book: author, title (are required in a add new book form), language that book is written in, location of the book status (to read, have read, reading) and comment.<br>
+  List of collection can be accessed via 'view them button' on Home Page or from nav bar 'your collection'. From there user can 'see details' of each book (as index view doesn't show everything), update them or delete entry.
+By going back to index view user is able to sort book collection by author, title, status DESC, location DESC (table header indicator arrow).<br>
+  Search function of index view allows user to browse entire collection by typing keyword or even single letter. Ruby function (SQL) will loop database columns (author, title, comment) and return index view of matching items.
+This is available for 'logged in' user. App has the admin site as well accessible via Admin link in top bar. User with admin rights can see list of all users and number of books in their collection, access index view of their collections, can also add and delete user.
+
+For user is important to see result of their action so redirecting appears in case of adding and updating book but with case of removing it from collection user gets notification.<br>
+
+HTML:<br>
+Semantic HTML (nav, form, table, article) and carefully used h1-h6 tags to improve accessibility <br>
+
+CSS: <br>
+Color properties are defined by CSS variable (at :root) what could be useful with working on bigger design project
+highlighted rows in index view. hover functions on submit buttons.
+</h3>
 </article>

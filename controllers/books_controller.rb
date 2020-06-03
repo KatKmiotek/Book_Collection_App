@@ -60,3 +60,36 @@ post '/collection/:id' do
   @book.update()
   redirect '/collection'
 end
+#sorting:
+
+get '/collection/byauthor/' do
+    @user = User.find(1)
+    erb(:"books/books_by_author")
+end
+get '/collection/bystatus/' do
+  @user = User.find(1)
+  erb(:"books/books_by_status")
+end
+get '/collection/bytitle/' do
+  @user = User.find(1)
+  erb(:"books/books_by_title")
+end
+get '/collection/bylocation/' do
+  @user = User.find(1)
+  erb(:"books/books_by_location")
+end
+get '/about' do
+  erb(:about)
+end
+
+#search for general data
+# post '/collection/search/' do
+#   @books = Book.search(params[:search])
+#   erb(:"books/search_result")
+# end
+
+#search in user's data
+post '/collection/search/' do
+  @user = User.find(1)
+  erb(:"books/search_result")
+end

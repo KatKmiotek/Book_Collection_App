@@ -10,3 +10,6 @@ th, td, tr {
   border: 1px solid grey;
   border-collapse: collapse;
 }
+tr:hover {
+  background-color: var(--my-green-light);
+}

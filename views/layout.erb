@@ -14,8 +14,8 @@
       <ul class= "menu">
       <li class = "item"><a href="/" method = "get" title = "Go back to home page" class = "">Home Page</a></li>
       <li class = "item"><a href="/collection" method = "get" title = "Your collection" class = "">Your Collection</a></li>
-      <li class = "item"><a href="/about" method = "get" title = "details about the project"class = "">About</a></li>
       <li><a href="/new" method = "post" title = "Add a new book"class = "">Add a new book</a></li>
+      <li class = "item"><a href="/about" method = "get" title = "details about the project"class = "">About</a></li>
       <li><form class="" action="/collection/search/" method="POST">
         <input type="text" class = "" placeholder="Search your books" name="search">
         <input type="submit" class="" value="Search">
@@ -27,5 +27,7 @@
     <%= yield %>
     </nav>
   </body>
-  <footer></footer>
+  <footer>
+    
+  </footer>
 </html>

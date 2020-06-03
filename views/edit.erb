@@ -1,6 +1,6 @@
 <fieldset>
-  <legend>Update</legend>
-  <form class="" action="/collection/<%= @book.id %>" method="post">
+  <legend></legend>
+  <form class="add-book" action="/collection/<%= @book.id %>" method="post">
     <select class="" name="user_id">
       <% for user in @users %>
       <option value="<%= user.id %>"><%= user.name %></option>
@@ -30,7 +30,7 @@
   <option value="have read"<%="selected" if @book.status == "have read"%>>have read</option>
   <option value="reading"<%="selected" if @book.status == "reading"%>>reading</option>
   </select>
-  <label for="comment">comment</label>
+  <label for="comment">Comment</label>
   <input type="text" name="comment" value="<%= @book.comment %>">
   <input class ="button" type="submit" name="" value="Update details">
 </form>

@@ -1,12 +1,14 @@
-<p>Title: <%= @book.title %> </p>
-<p>by <%= @book.author %> </p>
-<p>Currently is <%= @book.location %> </p>
-<p>Status: <%= @book.status %> </p>
-<p>Written in <%= @book.language %></p>
-<p>Comment: <%=@book.comment %></p>
+<article class="show">
+<h4>Title: <%= @book.title %> </h4>
+<h4>by <%= @book.author %> </h4>
+<h4>Currently is <%= @book.location %> </h4>
+<h4>Status: <%= @book.status %> </h4>
+<h4>Written in <%= @book.language %></h4>
+<h4>Comment: <%=@book.comment %></h4>
   <form class = "form-inline" action="/collection/<%= @book.id %>/edit" method="get">
   <input class = "button" type="submit" value="Update">
 </form>
 <form class = "form-inline" action="/collection/<%= @book.id %>/delete" method="post">
   <input class= "button" type="submit" value="Delete from library">
 </form>
+</article>

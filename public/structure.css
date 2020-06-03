@@ -10,6 +10,11 @@ body {
   background-repeat: no-repeat;
   font-family:
 }
+article {
+  padding: 20px;
+  line-height: 35px;
+  text-align: center;
+}
 
 .menu {
   display: flex;
@@ -26,6 +31,7 @@ body {
 .menu a {
   color: white;
 }
+
 
 ul {
   list-style-type: none;
@@ -55,4 +61,7 @@ h1, h2 {
   color: black;
   font-family: Raleway;
   font-size: 20px;
+}
+h4 {
+  padding: 5 auto;
 }

@@ -5,6 +5,7 @@ input[type=text] {
   border-radius:5px;
   font-size: 16px;
 }
+
 input[type=submit] {
   padding: 5px 10px;
   margin: 10px;
@@ -12,14 +13,20 @@ input[type=submit] {
   border-radius:5px;
   font-size: 16px;
 }
+input[type=submit]:hover {
+  box-shadow: 2px 2px 5px #9fc69f;
+}
+
 select {
   width: 5%;
   height: 10%;
   padding:10px;
   border-radius:10px;
+  font-size: 16px;
+  background-color: #dfecdf;
 }
 fieldset {
-
+  font-size: 18px;
   background-color: inherit;
   padding-bottom: 10px;
 }
@@ -27,7 +34,8 @@ fieldset {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-
+  padding-top: 20px;
+  margin-top: 20px;
 }
 .add-book label {
   margin: 0 5px 0 5px;

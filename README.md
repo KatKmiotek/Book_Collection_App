@@ -20,17 +20,16 @@ Color properties are defined by CSS variable (at :root) what could be useful wit
 highlighted rows in index view. hover functions on submit buttons.
 
 Diagrams:
-1) object diagram and class diagram
+1) class diagram
 
  * https://miro.com/app/board/o9J_krvdYjw=/
 
-2) use cases and sitemap
+2) sitemap and activity
 
 * https://miro.com/app/board/o9J_kruwIPw=/
 
+3) wireframes
+* https://miro.com/app/board/o9J_kr81Xio=/
 
 3) planning board
 * https://trello.com/b/zTo3RhI5/project-1
-
-4) activity diagram
-* https://miro.com/app/board/o9J_krz7SZg=/

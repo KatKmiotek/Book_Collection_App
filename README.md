@@ -9,7 +9,6 @@ User is able to add book: author, title (are required in a add new book form), l
 By going back to index view user is able to sort book collection by author, title, status DESC, location DESC (table header indicator arrow).
   Search function of index view allows user to browse entire collection by typing keyword or even single letter. Ruby function (SQL) will loop database columns (author, title, comment) and return index view of matching items.
 This is available for 'logged in' user. App has the admin site as well accessible via Admin link in top bar. User with admin rights can see list of all users and number of books in their collection, access index view of their collections, can also add and delete user.
-
 For user is important to see result of their action so redirecting appears in case of adding and updating book but with case of removing it from collection user gets notification.
 
 HTML:
